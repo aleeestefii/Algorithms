@@ -7,14 +7,17 @@
 #           A01749850 Estefanía Rico
 #----------------------------------------------------------
 from pprint import pprint
+from heapq import heapify, heappop
 
 
 type WeightedGraph = dict[str, set[tuple[str, float]]]
 
 def dijkstra_spt(initial: str, graph: WeightedGraph) -> tuple[dict[str, float], WeightedGraph]:
     visited: set[str] = set()
-    distance: int = 0
+    result: WeightedGraph = {k: set() for k in graph}
+    total: int = 0
     
+
 
 
 
