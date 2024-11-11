@@ -7,17 +7,24 @@
 #           A01749850 Estefanía Rico
 #----------------------------------------------------------
 from pprint import pprint
-from heapq import heapify, heappop
-
+from typing import Dict, Set, Tuple
 
 type WeightedGraph = dict[str, set[tuple[str, float]]]
 
 def dijkstra_spt(initial: str, graph: WeightedGraph) -> tuple[dict[str, float], WeightedGraph]:
-    visited: set[str] = set()
-    result: WeightedGraph = {k: set() for k in graph}
-    total: int = 0
-    
+    costs = {vertex: float('inf') for vertex in graph}
+    costs[initial] = 0
 
+    spanning_tree = {vertex: float('inf') for vertex in graph}
+
+    unvisited = set(graph.keys())
+
+    while unvisited:
+        current_vertex = min(
+            (vertex for vertex in unvisited if costs[vertex] != float('inf')),
+            
+        )
+    
 
 
 
