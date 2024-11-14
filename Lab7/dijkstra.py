@@ -19,8 +19,8 @@ def dijkstra_spt(
     spt: WeightedGraph = {node: set() for node in graph}
 
     #Initialize priority queue with the initial node
-    heap = [(0, initial)]
-    predecessors: dict[str, tuple[str, float]] ={}
+    heap: list[tuple[float, str]] = [(0, initial)]
+    predecessors: dict[str, tuple[str, float]] = {}
 
     while heap:
         current_distance, current_node = heapq.heappop(heap)
